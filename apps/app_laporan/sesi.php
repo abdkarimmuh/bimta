@@ -5,7 +5,7 @@
 		header("location: apps/app_materi/index.php");
 	}
 
-	include_once 'dbconfig.php';
+	include_once '../../dbconfig.php';
 	$stmt = $db_con->prepare("SELECT * FROM dosen WHERE id_dosen=:uid");
 	$stmt->execute(array(":uid"=>$_SESSION['user_session']));
 	$row=$stmt->fetch(PDO::FETCH_ASSOC);

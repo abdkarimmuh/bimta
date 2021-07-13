@@ -1,5 +1,5 @@
 <?php 
-include_once 'dbconfig.php';
+include_once '../../dbconfig.php';
 $id_file   	 = @$_POST['id_file']; 
 
 if (isset($_POST['btn-filemahasiswa'])) {
