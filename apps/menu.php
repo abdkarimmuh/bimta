@@ -24,7 +24,13 @@
 					<a href="?apps=mahasiswa"><span class="fa fa-user-plus"></span> Data Mahasiswa</a>
 				</div>
 				<div class="panel-body">
-					<a href="?apps=dosen"><span class="fa fa-group"></span> Data Dosen di Jurusan Anda</a>
+					<a href="?apps=dosen"><span class="fa fa-group"></span> Data Dosen</a>
+				</div>
+				<div class="panel-body">
+					<a href="?apps=prodi"><span class="fa fa-institution"></span> Data Program Studi (Prodi)</a>
+				</div>
+				<div class="panel-body">
+					<a href="?apps=admin"><span class="fa fa-user-plus"></span> Data Admin Prodi</a>
 				</div>
 			</div>
 		</div>
@@ -171,7 +177,7 @@
 		</div>
 	</div>
 <?php } elseif ($_SESSION['user_level']=='jurusan') { ?>
-<div class="panel-group" id="accordion">	
+<!-- <div class="panel-group" id="accordion">	
 		<div class="panel panel-primary">
 			<div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#section1">
 				<h5>PROFIL</h5>
@@ -202,5 +208,5 @@
 								
 			</div>
 		</div>
-	</div>
+	</div> -->
 <?php } ?>
