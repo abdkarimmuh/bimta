@@ -18,6 +18,34 @@ body{
     margin-top: 30px;
     float: center;
 }
+.tableheader{
+    margin-left: 15px;
+    margin-top: 10px;
+    margin-right: 15px;
+}
+.tableheader .head td{
+	text-align:center;
+	font-size:14px;
+	font-weight:bold;
+}
+.tableheader tr td{
+	padding:5px;
+	font-size:14px;
+}
+.header .title {
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+.header .subtitle {
+    font-size: 10px;
+    margin-bottom: 2px;
+}
+.divider{
+    margin-left: 60px;
+    width: 632px;
+    height: 2px;
+    background-color: black;
+}
 .tabel{
 	border-collapse:collapse;
     margin-left: 5px;
