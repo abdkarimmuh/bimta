@@ -3,17 +3,15 @@ $id_dosen   	 = @$_POST['id_dosen'];
 $nip_dosen   	 = @$_POST['nip_dosen']; 
 $username           = @$_POST['username'];
 $password      	 = @$_POST['password'];
-$id_jurusan      	 = @$_POST['id_jurusan'];
 $nm_dosen           = @$_POST['nm_dosen'];
 $no_telp      	 = @$_POST['no_telp'];
 
 if (isset($_POST['tambah_dosen'])) {
 	try {
-		$stmt = $db_con->prepare("INSERT INTO dosen(nip_dosen, nm_dosen, no_telp, id_jurusan, username, password) VALUES (:nip_dosen, :nm_dosen, :no_telp, :id_jurusan, :username, :password)");
+		$stmt = $db_con->prepare("INSERT INTO dosen(nip_dosen, nm_dosen, no_telp, username, password) VALUES (:nip_dosen, :nm_dosen, :no_telp, :username, :password)");
 		$stmt->bindParam(":nip_dosen", $nip_dosen);
 		$stmt->bindParam(":nm_dosen", $nm_dosen);
 		$stmt->bindParam(":no_telp", $no_telp);
-		$stmt->bindParam(":id_jurusan", $id_jurusan);
 		$stmt->bindParam(":username", $username);
 		$stmt->bindParam(":password", $password);
 		$stmt->execute();

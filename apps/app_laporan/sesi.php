@@ -22,8 +22,4 @@
 	$stmt4->execute(array(":uid"=>$_SESSION['user_session']));
 	$row4=$stmt4->fetch(PDO::FETCH_ASSOC);
 	
-	$stmt5 = $db_con->prepare("SELECT * FROM jurusan WHERE id_jurusan=:uid");
-	$stmt5->execute(array(":uid"=>$_SESSION['user_session']));
-	$row5=$stmt5->fetch(PDO::FETCH_ASSOC);
-
 ?>

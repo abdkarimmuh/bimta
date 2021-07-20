@@ -1,10 +1,10 @@
 <div class="panel panel-default">
 	<div class="panel-heading">
-		<?php if ($_SESSION['user_level']=='jurusan') { ?>
+		<?php if ($_SESSION['user_level']=='admin') { ?>
 			<a href="?apps=prodi&amp;act=add" class="btn btn-primary btn-sm"><i class="fa fa-plus-square"></i> Tambah Prodi </a>
 			<span class="pull-right">
 			<h4>Data Prodi </h4>
-	  </span>
+	  		</span>
 		<?php } else { ?>
 			<span>
 			<h4>Data Prodi </h4>
@@ -24,12 +24,7 @@
 	    	</thead>
 	    	<tbody>
 	    		<?php							
-	    		 	if ($_SESSION['user_level']=='jurusan') {
-	    		 	    $where = "WHERE id_jurusan='$_SESSION[user_session]'";
-	    		 	}else{
-	    		 		$where = "";
-	    		 	} 		    		    
-					$stmt = $db_con->prepare("SELECT * FROM prodi $where ORDER BY nama_prodi ASC");
+					$stmt = $db_con->prepare("SELECT * FROM prodi ORDER BY nama_prodi ASC");
 					$stmt->execute();
 					$no=1;
 					while($row=$stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -41,15 +36,8 @@
 					    <td align="center">
 							
 							<a class="edit-link" href="?apps=prodi&act=edit&id=<?php echo $row['id_prodi']; ?>" title="Edit"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i></a>
-							<?php
-								$no_delete=$row['id_prodi'];
-								$stmt2 = $db_con->prepare("SELECT * FROM prodi, admin_prodi where prodi.id_prodi ='$no_delete' && admin_prodi.id_prodi ='$no_delete' ");
-								$stmt2->execute();
-								$check=$stmt2->rowCount(); 
-								if($check == 0) {
-							?>
+
 							<a href="?apps=prodi&act=hapus&id=<?php echo $row['id_prodi']; ?>" title="Delete" onclick="return confirm('Yakin untuk menghapus data?')"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
-							<?php } ?>
 						</td>
 					</tr>
 				<?php

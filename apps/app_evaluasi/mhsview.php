@@ -1,5 +1,4 @@
 <style type="text/css">
-yl .<!--
 .style1 {
 	font-family: Harrington;
 	font-weight: bold;
@@ -51,11 +50,11 @@ yl .<!--
     <?php } ?>
 	</table>
   <?php             
-      $stmt2 = $db_con->prepare("SELECT * FROM evaluasi, prodi, jurusan, mahasiswa where evaluasi.nim_mhs='$_SESSION[user_session]' && mahasiswa.nim='$_SESSION[user_session]' && mahasiswa.id_prodi=prodi.id_prodi && jurusan.id_jurusan=prodi.id_jurusan");
+      $stmt2 = $db_con->prepare("SELECT * FROM evaluasi, prodi, mahasiswa where evaluasi.nim_mhs='$_SESSION[user_session]' && mahasiswa.nim='$_SESSION[user_session]' && mahasiswa.id_prodi=prodi.id_prodi");
       $stmt2->execute();
       while($row_2=$stmt2->fetch(PDO::FETCH_ASSOC)) {
   ?>
-	<p align="justify" class="penjelasan">Dinyatakan <strong><?php echo $row_2['status_bimbingan']; ?></strong> dalam pelaksanaan bimbingan tugas akhir di Program Studi <strong><?php echo $row_2['nama_prodi']; ?></strong> Jurusan <strong><?php echo $row_2['jurusan']; ?></strong> Politeknik Negeri Medan. Adapun pelaksanaan yang dimaksud yaitu pelaksanaan bimbingan tugas akhir melalui Portal Bimbingan Tugas Akhir milik Politeknik Negeri Medan, dengan daftar capaian yaitu sebagai berikut :</p>
+  <p align="justify" class="penjelasan">Dinyatakan <strong><?php echo $row_2['status_bimbingan']; ?></strong> dalam pelaksanaan bimbingan tugas akhir di Program Studi <strong><?php echo $row_2['nama_prodi']; ?></strong> Politeknik Negeri Medan. Adapun pelaksanaan yang dimaksud yaitu pelaksanaan bimbingan tugas akhir melalui Portal Bimbingan Tugas Akhir milik Politeknik Negeri Medan, dengan daftar capaian yaitu sebagai berikut :</p>
 		<div class="batas"></div>
 	<table class="w3-table-all w3-card-2 w3-centered" width="94%" height="321" border="1" align="center">
       <tr>

@@ -28,18 +28,6 @@
 						<input type="text" name="no_telp" id="input" class="form-control" placeholder="Maximum 12 angka" value="" required="required">
 					</div>
 				</div>
-				
-				<?php 
-	$edit = $db_con->query("SELECT * FROM jurusan WHERE id_jurusan='$_SESSION[user_session]'");
-	while($row = $edit->fetch(PDO::FETCH_ASSOC)){
-	?>
-				<div class="form-group">
-					<label for="input" class="col-sm-4 control-label">Jurusan :</label>
-					<div class="col-sm-6">
-						<input type="hidden" name="id_jurusan" value="<?php echo $row['id_jurusan']; ?>">
-						<input type="text" name="" id="input" class="form-control" readonly="" value="<?php echo $row['jurusan']; ?>" required="required">
-					</div>
-				</div><?php }?>
 
 				<div class="form-group">
 					<label for="input" class="col-sm-4 control-label">Username :</label>

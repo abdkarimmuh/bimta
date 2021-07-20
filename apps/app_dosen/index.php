@@ -19,7 +19,7 @@ switch ($view) {
 	
 }
 }else {
-	if ($_SESSION['user_level']=='jurusan') {include 'apps/app_dosen/view.php';} elseif ($_SESSION['user_level']=='admin') {include 'apps/app_dosen/adminview.php';}
+	if ($_SESSION['user_level']=='admin') {include 'apps/app_dosen/view.php';} 
 }
 
 ?>

@@ -8,11 +8,10 @@ Developed by using PHP 7, native and without framework.
 How to try?
 
 There are 5 levels of user :
-1. Jurusan (admin of majors) => username : jurusan | password : jurusan
-2. Admin (admin of study program) => username : admin | password : admin
-3. Kaprodi (head of lecturer in a study program) => username : kaprodi | password : kaprodi
-4. Mahasiswa (student) => username : mhs | password : mhs
-5. Dosen (lecturer) => username : dosen | password : dosen
+1. Admin (admin of study program) => username : admin | password : admin
+2. Kaprodi (head of lecturer in a study program) => username : kaprodi | password : kaprodi
+3. Mahasiswa (student) => username : mhs | password : mhs
+4. Dosen (lecturer) => username : dosen | password : dosen
 NOTE : A majors can have more study programs
 
 I use Bahasa (Indonesian Language) in this system, so if u feel difficult about the words, please check ur Google translate into Indonesian.

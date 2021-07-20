@@ -1,12 +1,6 @@
 <div class="panel panel-default">
 	<div class="panel-heading">
-			<?php
-				$prodi = $row3['id_prodi'];
-				$stmt2 = $db_con->prepare("SELECT * FROM kaprodi where id_prodi ='$prodi' ");
-				$stmt2->execute();
-				$check=$stmt2->rowCount(); 
-				if($check == 0) {
-			?>
+			<?php if ($_SESSION['user_level']=='admin') { ?>
 			<a href="?apps=kaprodi&amp;act=add" class="btn btn-primary btn-sm"><i class="fa fa-plus-square"></i> Tambah Data Kepala Prodi </a>
 			<span class="pull-right">
 			<h4>Data Kepala Prodi </h4>

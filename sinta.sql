@@ -163,7 +163,6 @@ CREATE TABLE `dosen` (
   `nip_dosen` char(18) NOT NULL,
   `nm_dosen` varchar(50) NOT NULL,
   `no_telp` char(12) DEFAULT NULL,
-  `id_jurusan` int(2) NOT NULL,
   `username` char(10) NOT NULL,
   `password` char(10) NOT NULL,
   `status_user` varchar(5) NOT NULL DEFAULT 'dosen'
@@ -173,13 +172,13 @@ CREATE TABLE `dosen` (
 -- Dumping data for table `dosen`
 --
 
-INSERT INTO `dosen` (`id_dosen`, `nip_dosen`, `nm_dosen`, `no_telp`, `id_jurusan`, `username`, `password`, `status_user`) VALUES
-(1, '197808091997021001', 'Dr. Bonny Matahari, Dipl.Ing., M.Eng.', '08170513214', 1, 'dosen', 'dosen', 'dosen'),
-(7, '199812141986031002', 'Drs. Jenny', '085274369585', 6, 'jenny', 'jenny', 'dosen'),
-(9, '199706182005011001', 'Syahrul, S.T., M.T.', '081334567893', 6, 'syahrul', 'syahrul', 'dosen'),
-(10, '199398761997021001', 'Ismail Marjan, M.Kom.', '087774369583', 1, 'ismail', 'ismail', 'dosen'),
-(12, '199772761997021001', 'Ruddin, S.T., M.T.', '081212344322', 8, 'ruddin', 'ruddin', 'dosen'),
-(13, '876555', 'Dr. Waty MIT', '9876', 1, '0bf173a883', '082018', 'dosen');
+INSERT INTO `dosen` (`id_dosen`, `nip_dosen`, `nm_dosen`, `no_telp`, `username`, `password`, `status_user`) VALUES
+(1, '197808091997021001', 'Dr. Bonny Matahari, Dipl.Ing., M.Eng.', '08170513214', 'dosen', 'dosen', 'dosen'),
+(7, '199812141986031002', 'Drs. Jenny', '085274369585','jenny', 'jenny', 'dosen'),
+(9, '199706182005011001', 'Syahrul, S.T., M.T.', '081334567893', 'syahrul', 'syahrul', 'dosen'),
+(10, '199398761997021001', 'Ismail Marjan, M.Kom.', '087774369583','ismail', 'ismail', 'dosen'),
+(12, '199772761997021001', 'Ruddin, S.T., M.T.', '081212344322', 'ruddin', 'ruddin', 'dosen'),
+(13, '876555', 'Dr. Waty MIT', '9876', '0bf173a883', '082018', 'dosen');
 
 -- --------------------------------------------------------
 
@@ -268,33 +267,6 @@ INSERT INTO `judul_ta` (`id_ta`, `nim`, `judul1`, `judul2`, `judul3`, `judul_kap
 (9, 1505102086, 'Perancangan dan Pembuatan Sistem Informasi Swalayan Berbasis Web', 'Perancangan dan Pembuatan Sistem Informasi Akademik Berbasis Web', 'Perancangan dan Pembuatan Sistem Informasi Sekolah Berbasis Cloud', NULL, NULL),
 (10, 15051, 'Perancangan 1', 'Pembuatan', 'Portal', 'Pembuatan', NULL),
 (11, 1223343212, 'Sistem Informasi Ternak', 'Sistem Informasi Mobil', 'Sistem Informasi SPP', 'Sistem Informasi SPP', 'Sistem Informasi SPP');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `jurusan`
---
-
-CREATE TABLE `jurusan` (
-  `id_jurusan` int(2) NOT NULL,
-  `jurusan` varchar(35) NOT NULL,
-  `nama_kajur` varchar(50) NOT NULL,
-  `nm_admin` varchar(30) NOT NULL,
-  `no_telp` char(12) DEFAULT NULL,
-  `username` char(8) NOT NULL,
-  `password` char(8) NOT NULL,
-  `status_user` varchar(7) NOT NULL DEFAULT 'jurusan'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `jurusan`
---
-
-INSERT INTO `jurusan` (`id_jurusan`, `jurusan`, `nama_kajur`, `nm_admin`, `no_telp`, `username`, `password`, `status_user`) VALUES
-(1, 'Teknik Komputer dan Informatika', 'Kapal Berlabuh, S.T., M.Kom.', 'Roswati', '081234567891', 'jurusan', 'jurusan', 'jurusan'),
-(6, 'Teknik Mesin', 'Mobil Berjalan, S.T., M.T.', 'Hilmawan Putra', '081212344321', 'mesin', 'mesin', 'jurusan'),
-(8, 'Teknik Elektro', 'Kereta Cepat, S.T., M.T.', 'Kaidi', '082234761234', 'elektro', 'elektro', 'jurusan'),
-(10, 'Akuntansi', 'Sepeda Listrik, S.E., M.M.', 'arif', '0987', 'sepeda', 'sepeda', 'jurusan');
 
 -- --------------------------------------------------------
 
@@ -395,21 +367,20 @@ INSERT INTO `pesan_tambahan` (`id_pesantambahan`, `dosen_pengirim`, `mhs_penerim
 CREATE TABLE `prodi` (
   `id_prodi` int(2) NOT NULL,
   `nama_prodi` varchar(30) NOT NULL,
-  `jenjang` varchar(5) NOT NULL,
-  `id_jurusan` int(2) NOT NULL
+  `jenjang` varchar(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `prodi`
 --
 
-INSERT INTO `prodi` (`id_prodi`, `nama_prodi`, `jenjang`, `id_jurusan`) VALUES
-(1, 'Manajemen Informatika', 'D-III', 1),
-(10, 'Teknik Konversi Energi', 'D-III', 6),
-(11, 'Teknik Mesin', 'D-III', 6),
-(13, 'Teknik Elektronika', 'D-III', 8),
-(14, 'Teknik Komputer', 'D-III', 1),
-(16, 'Desain grafis', 'D-III', 1);
+INSERT INTO `prodi` (`id_prodi`, `nama_prodi`, `jenjang`) VALUES
+(1, 'Manajemen Informatika', 'D-III'),
+(10, 'Teknik Konversi Energi', 'D-III'),
+(11, 'Teknik Mesin', 'D-III'),
+(13, 'Teknik Elektronika', 'D-III'),
+(14, 'Teknik Komputer', 'D-III'),
+(16, 'Desain grafis', 'D-III');
 
 -- --------------------------------------------------------
 
@@ -492,8 +463,7 @@ ALTER TABLE `comment_tambahan`
 -- Indexes for table `dosen`
 --
 ALTER TABLE `dosen`
-  ADD PRIMARY KEY (`id_dosen`),
-  ADD KEY `id_jurusan` (`id_jurusan`);
+  ADD PRIMARY KEY (`id_dosen`);
 
 --
 -- Indexes for table `evaluasi`
@@ -516,13 +486,6 @@ ALTER TABLE `file_mahasiswa`
 ALTER TABLE `judul_ta`
   ADD PRIMARY KEY (`id_ta`),
   ADD KEY `nim` (`nim`);
-
---
--- Indexes for table `jurusan`
---
-ALTER TABLE `jurusan`
-  ADD PRIMARY KEY (`id_jurusan`),
-  ADD UNIQUE KEY `jurusan` (`jurusan`);
 
 --
 -- Indexes for table `kaprodi`
@@ -551,8 +514,7 @@ ALTER TABLE `pesan_tambahan`
 -- Indexes for table `prodi`
 --
 ALTER TABLE `prodi`
-  ADD PRIMARY KEY (`id_prodi`),
-  ADD KEY `id_jurusan` (`id_jurusan`);
+  ADD PRIMARY KEY (`id_prodi`);
 
 --
 -- Indexes for table `subject`
@@ -614,12 +576,6 @@ ALTER TABLE `judul_ta`
   MODIFY `id_ta` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT for table `jurusan`
---
-ALTER TABLE `jurusan`
-  MODIFY `id_jurusan` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
---
 -- AUTO_INCREMENT for table `kaprodi`
 --
 ALTER TABLE `kaprodi`
@@ -674,12 +630,6 @@ ALTER TABLE `comment_tambahan`
   ADD CONSTRAINT `comment_tambahan_ibfk_1` FOREIGN KEY (`id_pesantambahan`) REFERENCES `pesan_tambahan` (`id_pesantambahan`);
 
 --
--- Constraints for table `dosen`
---
-ALTER TABLE `dosen`
-  ADD CONSTRAINT `dosen_ibfk_1` FOREIGN KEY (`id_jurusan`) REFERENCES `jurusan` (`id_jurusan`);
-
---
 -- Constraints for table `evaluasi`
 --
 ALTER TABLE `evaluasi`
@@ -717,12 +667,6 @@ ALTER TABLE `mahasiswa`
 ALTER TABLE `pesan_tambahan`
   ADD CONSTRAINT `pesan_tambahan_ibfk_1` FOREIGN KEY (`dosen_pengirim`) REFERENCES `dosen` (`id_dosen`),
   ADD CONSTRAINT `pesan_tambahan_ibfk_2` FOREIGN KEY (`mhs_penerima`) REFERENCES `mahasiswa` (`nim`);
-
---
--- Constraints for table `prodi`
---
-ALTER TABLE `prodi`
-  ADD CONSTRAINT `prodi_ibfk_1` FOREIGN KEY (`id_jurusan`) REFERENCES `jurusan` (`id_jurusan`);
 
 --
 -- Constraints for table `subject`

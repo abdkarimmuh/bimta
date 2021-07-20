@@ -10,7 +10,7 @@
 		<form action="" method="POST" class="form-horizontal" role="form">
 				<div class="form-group">
 					<center>
-					  <legend>Edit dosen jurusan  </legend>
+					  <legend>Edit dosen </legend>
 					</center>
 				</div>
 

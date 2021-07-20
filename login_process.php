@@ -31,11 +31,6 @@
 			$row4 = $stmt4->fetch(PDO::FETCH_ASSOC);
 			$count4 = $stmt4->rowCount();
 			
-			$stmt5 = $db_con->prepare("SELECT * FROM jurusan WHERE username=:username");
-			$stmt5->execute(array(":username"=>$username));
-			$row5 = $stmt5->fetch(PDO::FETCH_ASSOC);
-			$count5 = $stmt5->rowCount();
-			
 			if($row['password']==$password){
 				echo "ok";
 				$_SESSION['user_session'] = $row['id_dosen'];			
@@ -55,11 +50,6 @@
 				echo "ok";
 				$_SESSION['user_session'] = $row4['id_kaprodi'];			
 				$_SESSION['user_level'] = $row4['status_user'];			
-			}
-			elseif($row5['password']==$password){
-				echo "ok";
-				$_SESSION['user_session'] = $row5['id_jurusan'];			
-				$_SESSION['user_level'] = $row5['status_user'];			
 			}
 			else{
 				echo "Maaf,Harap Periksa Username & Password Anda";

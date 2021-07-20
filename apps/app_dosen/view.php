@@ -1,10 +1,10 @@
 <div class="panel panel-default">
 	<div class="panel-heading">
-		<?php if ($_SESSION['user_level']=='jurusan') { ?>
+		<?php if ($_SESSION['user_level']=='admin') { ?>
 			<a href="?apps=dosen&amp;act=add" class="btn btn-primary btn-sm"><i class="fa fa-plus-square"></i> Tambah Dosen </a>
 			<span class="pull-right">
-			<h4>Data dosen </h4>
-	  </span>
+			<h4>Data Dosen </h4>
+	  		</span>
 		<?php } else { ?>
 			<span>
 			<h4>Data Dosen </h4>
@@ -25,13 +25,8 @@
 	    		</tr>
 	    	</thead>
 	    	<tbody>
-	    		<?php							
-	    		 	if ($_SESSION['user_level']=='jurusan') {
-	    		 	    $where = "WHERE id_jurusan='$_SESSION[user_session]'";
-	    		 	}else{
-	    		 		$where = "";
-	    		 	} 		    		    
-					$stmt = $db_con->prepare("SELECT * FROM dosen $where ORDER BY nm_dosen ASC");
+	    		<?php
+					$stmt = $db_con->prepare("SELECT * FROM dosen ORDER BY nm_dosen ASC");
 					$stmt->execute();
 					$no=1;
 					while($row=$stmt->fetch(PDO::FETCH_ASSOC)) {

@@ -28,7 +28,7 @@
 	    		 	}else{
 	    		 		$where = "";
 	    		 	}
-					$stmt = $db_con->prepare("SELECT * FROM dosen, jurusan, prodi where id_prodi=$where && prodi.id_jurusan=jurusan.id_jurusan && dosen.id_jurusan=jurusan.id_jurusan");
+					$stmt = $db_con->prepare("SELECT * FROM dosen, prodi where id_prodi=$where");
 					$stmt->execute();
 				?>
 				

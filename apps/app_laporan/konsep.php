@@ -91,7 +91,7 @@ include "sesi.php";
       </table>
             <table border="0" class="ket">
             <tr>
-                <td>Kartu ini harap dikembalikan melalui Administrasi Jurusan</td>    
+                <td>Kartu ini harap dikembalikan melalui Administrasi</td>    
             </tr>
             <tr>
                 <td>Bila bimbingan mahasiswa telah selesai (minimal telah 7 kali bimbingan)</td>    

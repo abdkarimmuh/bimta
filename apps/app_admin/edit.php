@@ -29,23 +29,6 @@
 						<input type="text" name="no_telp" id="input" class="form-control" value="<?php echo $row['no_telp']; ?>" required="required">
 					</div>
 				</div>
-				
-				<?php
-	    		    
-					$stmt = $db_con->prepare("SELECT * FROM prodi where id_jurusan='$_SESSION[user_session]' ORDER BY nama_prodi ASC");
-					$stmt->execute();
-				?>
-				
-				<div class="form-group">
-					<label for="inputLevel" class="col-sm-4 control-label">Program Studi :</label>
-					<div class="col-sm-4">
-					<select name="id_prodi" id="inputLevel" class="form-control" required="required">
-					<option>-- Pilih Program Studi --</option>
-					<?php while($row=$stmt->fetch(PDO::FETCH_ASSOC)) { ?>
-					<option value="<?php echo $row['id_prodi'] ?>"><?php echo $row['nama_prodi'] ?></option>
-					<?php } ?>
-					</select></div>
-				</div>
 
 				<div class="form-group">
 					<div class="col-sm-6 col-sm-offset-4">

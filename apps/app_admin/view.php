@@ -1,6 +1,6 @@
 <div class="panel panel-default">
 	<div class="panel-heading">
-		<?php if ($_SESSION['user_level']=='jurusan') { ?>
+		<?php if ($_SESSION['user_level']=='admin') { ?>
 			<a href="?apps=admin&amp;act=add" class="btn btn-primary btn-sm"><i class="fa fa-plus-square"></i> Tambah Admin </a>
 			<span class="pull-right">
 			<h4>Data Admin </h4>
@@ -17,7 +17,6 @@
 			<thead>
 	    		<tr>
 	    			<th width="2%" style="width: 2%"><div align="center">No</div></th>
-	    			<th width="10%" style="width: 10%"><div align="center">Program Studi</div></th>
 	    			<th width="10%" style="width: 10%"><div align="center">Nama Admin</div></th>
 					<th width="7%" style="width: 7%"><div align="center">No Telp/HP</div></th>
 					<th width="5%" style="width: 5%"><div align="center">Username</div></th>
@@ -26,14 +25,13 @@
 	    	</thead>
 	    	<tbody>
 	    		<?php							
-	    		 	$stmt = $db_con->prepare("SELECT * FROM admin_prodi, prodi where admin_prodi.id_prodi = prodi.id_prodi && prodi.id_jurusan='$_SESSION[user_session]' ORDER BY nm_admin ASC");
+	    		 	$stmt = $db_con->prepare("SELECT * FROM admin_prodi ORDER BY nm_admin ASC");
 					$stmt->execute();
 					$no=1;
 					while($row=$stmt->fetch(PDO::FETCH_ASSOC)) {
 				?>
 					<tr>
 						<td><div align="center"><?php echo $no; ?></div></td>
-						<td><div align="center"><?php echo $row['nama_prodi']; ?></div></td>
 						<td><div align="center"><?php echo $row['nm_admin']; ?></div></td>
 						<td><div align="center"><?php echo $row['no_telp']; ?></div></td>
 						<td><div align="center"><?php echo $row['username']; ?></div></td>
