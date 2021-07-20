@@ -1,6 +1,6 @@
 <?php
 	$db_host = "localhost";
-	$db_name = "sinta2"; //nama database
+	$db_name = "sinta"; //nama database
 	$db_user = "root";
 	$db_pass = "password";
 
