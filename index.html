@@ -60,17 +60,29 @@
         >
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#home">
+              <a
+                class="nav-link"
+                href="javascript:void(0)"
+                onclick="scrollToDownload('home')"
+              >
                 <p>Home</p>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#apps">
+              <a
+                class="nav-link"
+                href="javascript:void(0)"
+                onclick="scrollToDownload('apps')"
+              >
                 <p>Layanan Aplikasi</p>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">
+              <a
+                class="nav-link"
+                href="javascript:void(0)"
+                onclick="scrollToDownload('contact')"
+              >
                 <p>Kontak dan Informasi</p>
               </a>
             </li>
@@ -346,6 +358,23 @@
       src="./assets/js/now-ui-kit.js?v=1.3.0"
       type="text/javascript"
     ></script>
+    <script>
+      $(document).ready(function () {
+        // the body of this function is in assets/js/now-ui-kit.js
+        nowuiKit.initSliders();
+      });
+
+      function scrollToDownload(id) {
+        if ($(`#${id}`).length != 0) {
+          $("html, body").animate(
+            {
+              scrollTop: $(`#${id}`).offset().top,
+            },
+            1000
+          );
+        }
+      }
+    </script>
     <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
     <df-messenger
       intent="WELCOME"
