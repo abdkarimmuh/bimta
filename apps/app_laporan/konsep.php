@@ -113,13 +113,15 @@
         <td align="center"><?php echo $no; ?></td>
         <td align="center"><?php $tgl=date_create($row['tgl']); echo date_format($tgl, 'jS F Y'); ?></td>
         <td align="left"><?php echo $row['subject']; ?></td>
-        <td align="center">&nbsp;</td>
+        <td align="center">
+          <img src="signature-example.png" width="54" height="16">
+        </td>
       </tr>
 
       <?php
-		$no++;
-		}
-	  ?>
+        $no++;
+        }
+      ?>
     </table>
     <table border="0" class="ket">
       <tr>
