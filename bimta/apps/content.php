@@ -2,25 +2,27 @@
 require_once 'dbconfig.php';
 if (empty($_GET['apps'])) { ?>
 <style type="text/css">
-	.style1 {font-family: Broadway}
+.style1 {
+  font-family: Broadway
+}
 </style>
 
-	<div class="panel panel-default">
-		<div class="panel-body">
-			<center>
-				<h2 class="style1">Selamat Datang di Halaman <?php 
+<div class="panel panel-default">
+  <div class="panel-body">
+    <center>
+      <h2 class="style1">Selamat Datang di Halaman <?php 
 					if ($_SESSION['user_level']=='dosen') {echo "Dosen Pembimbing";} 
 					elseif ($_SESSION['user_level']=='mahasiswa') {echo "Mahasiswa";} 
 					elseif ($_SESSION['user_level']=='admin') {echo "Administrator";} 
 					elseif ($_SESSION['user_level']=='kaprodi') {echo "Kepala Prodi";} 
 				?></h2>
-				<br>
-				<span class="office">
-					<h2>Sistem Informasi Tugas Akhir</h2>
-				</span>
-			</center>
-		</div>
-	</div>
+      <br>
+      <span class="office">
+        <h2>Portal Bimbingan Tugas Akhir</h2>
+      </span>
+    </center>
+  </div>
+</div>
 <?php
 } elseif ($_GET['apps']=='materi') {
 	include 'app_materi/index.php';

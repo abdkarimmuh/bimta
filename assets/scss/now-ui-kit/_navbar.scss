@@ -42,6 +42,9 @@
                 padding: $padding-small-vertical $padding-small-horizontal;
             }
         }
+        .nav-link.icon{
+            margin-left: 12px;
+        }
 
         .nav-link:not(.btn){
             text-transform: uppercase;
@@ -56,11 +59,11 @@
 
             i.fab,
             i.now-ui-icons{
-                font-size: 18px;
+                font-size: 12px;
                 position: relative;
                 top: 3px;
                 text-align: center;
-                width: 21px;
+                width: 16px;
             }
 
             i.now-ui-icons{

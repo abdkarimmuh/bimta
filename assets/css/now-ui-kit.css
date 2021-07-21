@@ -1542,6 +1542,42 @@ fieldset[disabled] .navbar .navbar-nav > a.btn.active {
   top: 1px;
 }
 
+.btn-default {
+  background-color: #888888;
+  color: #FFFFFF;
+}
+.btn-default:hover, .btn-default:focus, .btn-default:not(:disabled):not(.disabled):active, .btn-default:not(:disabled):not(.disabled).active, .btn-default:not(:disabled):not(.disabled):active:focus, .btn-default:not(:disabled):not(.disabled).active:focus, .btn-default:active:hover, .btn-default.active:hover, .show > .btn-default.dropdown-toggle, .show > .btn-default.dropdown-toggle:focus, .show > .btn-default.dropdown-toggle:hover {
+  background-color: #979797;
+  color: #FFFFFF;
+  box-shadow: none;
+}
+.btn-default:hover {
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17);
+}
+.btn-default.disabled, .btn-default.disabled:hover, .btn-default.disabled:focus, .btn-default.disabled.focus, .btn-default.disabled:active, .btn-default.disabled.active, .btn-default:disabled, .btn-default:disabled:hover, .btn-default:disabled:focus, .btn-default:disabled.focus, .btn-default:disabled:active, .btn-default:disabled.active, .btn-default[disabled], .btn-default[disabled]:hover, .btn-default[disabled]:focus, .btn-default[disabled].focus, .btn-default[disabled]:active, .btn-default[disabled].active, fieldset[disabled] .btn-default, fieldset[disabled] .btn-default:hover, fieldset[disabled] .btn-default:focus, fieldset[disabled] .btn-default.focus, fieldset[disabled] .btn-default:active, fieldset[disabled] .btn-default.active {
+  background-color: #888888;
+  border-color: #888888;
+}
+.btn-default.btn-simple {
+  color: #888888;
+  border-color: #888888;
+}
+.btn-default.btn-simple:hover, .btn-default.btn-simple:focus, .btn-default.btn-simple:not(:disabled):not(.disabled):active, .btn-default.btn-simple:not(:disabled):not(.disabled).active, .btn-default.btn-simple:not(:disabled):not(.disabled):active:focus, .btn-default.btn-simple:not(:disabled):not(.disabled).active:focus, .btn-default.btn-simple:active:hover, .btn-default.btn-simple.active:hover, .show > .btn-default.btn-simple.dropdown-toggle, .show > .btn-default.btn-simple.dropdown-toggle:focus, .show > .btn-default.btn-simple.dropdown-toggle:hover {
+  background-color: transparent;
+  color: #979797;
+  border-color: #979797;
+  box-shadow: none;
+}
+.btn-default.btn-link {
+  color: #888888;
+}
+.btn-default.btn-link:hover, .btn-default.btn-link:focus, .btn-default.btn-link:not(:disabled):not(.disabled):active, .btn-default.btn-link:not(:disabled):not(.disabled).active, .btn-default.btn-link:not(:disabled):not(.disabled):active:focus, .btn-default.btn-link:not(:disabled):not(.disabled).active:focus, .btn-default.btn-link:active:hover, .btn-default.btn-link.active:hover, .show > .btn-default.btn-link.dropdown-toggle, .show > .btn-default.btn-link.dropdown-toggle:focus, .show > .btn-default.btn-link.dropdown-toggle:hover {
+  background-color: transparent;
+  color: #979797;
+  text-decoration: none;
+  box-shadow: none;
+}
+
 .btn-primary {
   background-color: #009688;
   color: #FFFFFF;
@@ -1868,6 +1904,17 @@ fieldset[disabled] .navbar .navbar-nav > a.btn.active {
   background-color: transparent;
   color: #979797;
   border-color: #979797;
+  box-shadow: none;
+}
+
+.btn-outline-neutral {
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+}
+.btn-outline-neutral:hover, .btn-outline-neutral:focus, .btn-outline-neutral:not(:disabled):not(.disabled):active, .btn-outline-neutral:not(:disabled):not(.disabled).active, .btn-outline-neutral:not(:disabled):not(.disabled):active:focus, .btn-outline-neutral:not(:disabled):not(.disabled).active:focus, .btn-outline-neutral:active:hover, .btn-outline-neutral.active:hover, .show > .btn-outline-neutral.dropdown-toggle, .show > .btn-outline-neutral.dropdown-toggle:focus, .show > .btn-outline-neutral.dropdown-toggle:hover {
+  background-color: transparent;
+  color: #FFFFFF;
+  border-color: #FFFFFF;
   box-shadow: none;
 }
 
@@ -3680,6 +3727,9 @@ Created using IcoMoon - icomoon.io
 .navbar .navbar-nav .nav-link.btn.btn-sm {
   padding: 5px 15px;
 }
+.navbar .navbar-nav .nav-link.icon {
+  margin-left: 12px;
+}
 .navbar .navbar-nav .nav-link:not(.btn) {
   text-transform: uppercase;
   font-size: 0.7142em;
@@ -3692,11 +3742,11 @@ Created using IcoMoon - icomoon.io
 }
 .navbar .navbar-nav .nav-link:not(.btn) i.fab,
 .navbar .navbar-nav .nav-link:not(.btn) i.now-ui-icons {
-  font-size: 18px;
+  font-size: 12px;
   position: relative;
   top: 3px;
   text-align: center;
-  width: 21px;
+  width: 16px;
 }
 .navbar .navbar-nav .nav-link:not(.btn) i.now-ui-icons {
   top: 4px;
@@ -4050,6 +4100,13 @@ img {
 
 .img-raised {
   box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
+}
+
+.img-operator {
+  height: 5vh;
+  width: auto;
+  margin-left: 2vw;
+  margin-right: 2vw;
 }
 
 .popover {
@@ -4527,10 +4584,10 @@ img {
 }
 
 .index-page .page-header {
-  height: 125vh;
+  height: 100vh;
 }
 .index-page .page-header .container > .content-center {
-  top: 37%;
+  top: 48%;
 }
 .index-page .page-header .category-absolute {
   position: absolute;

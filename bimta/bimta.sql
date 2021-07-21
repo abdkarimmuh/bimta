@@ -218,7 +218,7 @@ INSERT INTO `evaluasi` (`id_evaluasi`, `nim_mhs`, `status_bimbingan`, `evaluasi_
 
 CREATE TABLE `file_mahasiswa` (
   `id_file` int(10) NOT NULL,
-  `file` varchar(30) NOT NULL,
+  `file` varchar(1000) NOT NULL,
   `type` varchar(20) NOT NULL,
   `size` int(10) NOT NULL,
   `mhs_pengirim` int(10) NOT NULL,

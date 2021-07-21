@@ -26,7 +26,7 @@
 
             <center>
               <img src='logo.png' width='90' height='90' />
-              <h4>SISTEM INFORMASI TUGAS AKHIR</h4>
+              <h4>PORTAL BIMBINGAN TUGAS AKHIR</h4>
               <h3>POLITEKNIK NEGERI JAKARTA</h3>
             </center>
             <hr />

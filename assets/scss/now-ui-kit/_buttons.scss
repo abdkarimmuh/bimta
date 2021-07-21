@@ -80,7 +80,7 @@
 }
 
 // Apply the mixin to the buttons
-// .btn-default { @include btn-styles($default-color, $default-states-color); }
+.btn-default { @include btn-styles($default-color, $default-states-color); }
 .btn-primary { @include btn-styles($primary-color, $primary-states-color); }
 .btn-success { @include btn-styles($success-color, $success-states-color); }
 .btn-info    { @include btn-styles($info-color, $info-states-color); }
@@ -94,6 +94,7 @@
 .btn-outline-warning { @include outline-buttons($warning-color, $warning-states-color); }
 .btn-outline-danger  { @include outline-buttons($danger-color, $danger-states-color); }
 .btn-outline-default { @include outline-buttons($default-color, $default-states-color); }
+.btn-outline-neutral { @include outline-buttons($white-color, $white-color); }
 
 .btn-round{
     border-width: $border-thin;
