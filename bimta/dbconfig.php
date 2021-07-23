@@ -2,7 +2,7 @@
 	$db_host = "localhost";
 	$db_name = "bimta"; //nama database
 	$db_user = "root";
-	$db_pass = "password";
+	$db_pass = "";
 
 	try{
 		//koneksi menggunakan PDO

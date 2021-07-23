@@ -25,9 +25,9 @@
           <div class="panel-body">
 
             <center>
-              <img src='logo.png' width='90' height='90' />
+              <img src='logo.png' width='100' height='100' />
               <h4>PORTAL BIMBINGAN TUGAS AKHIR</h4>
-              <h3>POLITEKNIK NEGERI JAKARTA</h3>
+              <h3>BROADBAND MULTIMEDIA</h3>
             </center>
             <hr />
             <div id="error"></div>
@@ -53,11 +53,11 @@
 
       <center>
         <p>&nbsp;</p>
-        <p><small style="color: #fff"><span class="style3" style="font-weight: bold;">BIMTA - Politeknik Negeri Jakarta
+        <p><small style="color: #fff"><span class="style3" style="font-weight: bold;">BIMTA - BROADBAND MULTIMEDIA
               &copy; <?php echo date('Y');?></span><br>
             <strong><span class="style3"><span class="style3">Jl. Prof. DR. G.A. Siwabessy, Kukusan, Kota Depok, Jawa
                   Barat 16424<br>
-                  Developed by : Developer Indonesia
+                  Developed by : Kukuh Al Ansor
                 </span></strong></small> </p>
       </center>
     </div>
