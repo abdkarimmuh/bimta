@@ -22,12 +22,12 @@
     <div class="container">
       <form class="" method="post" id="login-form" autocomplete="off">
         <div class="form-signin panel panel-default">
-          <div class="panel-body">
+          <div class="panel-body body2">
 
             <center>
               <img src='logo.png' width='100' height='100' />
-              <h4>PORTAL BIMBINGAN TUGAS AKHIR</h4>
-              <h3>BROADBAND MULTIMEDIA</h3>
+              <h4 class="h41">PORTAL BIMBINGAN TUGAS AKHIR</h4>
+              <h3 class="h31">BROADBAND MULTIMEDIA</h3>
             </center>
             <hr />
             <div id="error"></div>
@@ -42,7 +42,7 @@
           <div class="panel-footer">
             <div class="row">
               <div class="col-sm-2">
-                <button type="submit" class="btn btn-default" name="btn-login" id="btn-login">
+                <button type="submit" class="btn btn-default btndefault2" name="btn-login" id="btn-login">
                   <span class="glyphicon glyphicon-log-in"></span> &nbsp; Login
                 </button>
               </div>
