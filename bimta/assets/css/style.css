@@ -5,6 +5,26 @@ body{
 	background:#f1f9f9;
 }
 
+.body2 {
+  background: #009688;
+  border-radius: 20px;
+}
+
+.btndefault2 {
+  background-color: #009688;
+  color: white;
+}
+
+.h41 {
+  padding-top: 30px;
+  color: white;
+}
+
+.h31 {
+  color: white;
+  font-weight: bold;
+}
+
 .form-signin {
     max-width: 500px;
     margin: 0 auto;
@@ -38,9 +58,9 @@ body{
 {
 	margin-top:70px;
 }
-body.special-page{
+/* body.special-page{
   background: url("../img/special-page-bg.png") no-repeat scroll top center #2b3237;  
-}
+} */
 .navbar-brand{
 	font-family:"Lucida Handwriting";
 }
