@@ -1,6 +1,6 @@
 # BIMTA
 
-<center><img src="/assets/img/logokelas.png" alt="Bimta" title="Bimta" width="30" height="auto" /></center>
+<center><img src="/assets/img/logokelas.png" alt="Bimta" title="Bimta" width="100" height="auto" /></center>
 
 Aplikasi Bimbingan Akademik untuk jurusan Brodband Multimedia
 Politeknik Negeri Jakarta
