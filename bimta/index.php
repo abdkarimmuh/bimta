@@ -53,9 +53,9 @@
 
       <center>
         <p>&nbsp;</p>
-        <p><small style="color: #fff"><span class="style3" style="font-weight: bold;">BIMTA - BROADBAND MULTIMEDIA
+        <p><small style="color: #fff"><span class="style3" style="color: black; font-weight: bold;">BIMTA - BROADBAND MULTIMEDIA
               &copy; <?php echo date('Y');?></span><br>
-            <strong><span class="style3"><span class="style3">Jl. Prof. DR. G.A. Siwabessy, Kukusan, Kota Depok, Jawa
+            <strong><span class="style3"><span style="color: black; class="style3">Jl. Prof. DR. G.A. Siwabessy, Kukusan, Kota Depok, Jawa
                   Barat 16424<br>
                   Developed by : Kukuh Al Ansor
                 </span></strong></small> </p>
