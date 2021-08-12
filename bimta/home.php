@@ -67,6 +67,16 @@
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav"></ul>
         <ul class="nav navbar-nav navbar-right">
+        <?php if ($_SESSION['user_level']=='mahasiswa') {
+			        echo "<li><a download href=petunjuk/mahasiswa.pdf><span class=\"fa fa-download\"></span> Unduh Petunjuk Penggunaan Portal</a></li>";
+			        }
+					elseif ($_SESSION['user_level']=='dosen') {
+			        echo "<li><a download href=petunjuk/dosen.pdf><span class=\"fa fa-download\"></span> Unduh Petunjuk Penggunaan Portal</a></li>";
+			        }
+					elseif ($_SESSION['user_level']=='kaprodi') {
+			        echo "<li><a download href=petunjuk/kaprodi.pdf><span class=\"fa fa-download\"></span> Unduh Petunjuk Penggunaan Portal</a></li>";
+			        }
+					 ?>
           <li><a href="logout.php"><span class="fa fa-sign-out"></span> Keluar</a></li>
         </ul>
       </div>

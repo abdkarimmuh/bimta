@@ -26,12 +26,6 @@
 				<div class="panel-body">
 					<a href="?apps=dosen"><span class="fa fa-group"></span> Data Dosen</a>
 				</div>
-				<div class="panel-body">
-					<a href="?apps=prodi"><span class="fa fa-institution"></span> Data Program Studi (Prodi)</a>
-				</div>
-				<div class="panel-body">
-					<a href="?apps=admin"><span class="fa fa-user-plus"></span> Data Admin</a>
-				</div>
 			</div>
 		</div>
 	</div>

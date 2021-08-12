@@ -25,7 +25,7 @@
           <div class="panel-body body2">
 
             <center>
-              <img src='logo.png' width='100' height='100' />
+              <img src='logo.png' width='130' height='130' />
               <h4 class="h41">PORTAL BIMBINGAN TUGAS AKHIR</h4>
               <h3 class="h31">BROADBAND MULTIMEDIA</h3>
             </center>

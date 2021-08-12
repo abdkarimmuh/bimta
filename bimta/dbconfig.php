@@ -1,8 +1,8 @@
 <?php
 	$db_host = "localhost";
-	$db_name = "bimta"; //nama database
-	$db_user = "root";
-	$db_pass = "";
+	$db_name = "u613798807_bimta"; //nama database
+	$db_user = "u613798807_bimta";
+	$db_pass = "Pnjjayajayajaya1";
 
 	try{
 		//koneksi menggunakan PDO

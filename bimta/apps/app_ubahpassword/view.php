@@ -20,7 +20,7 @@ yl .<!--
         <tr>
           <td height="21">Password</td>
           <td>:</td>
-          <td><?php echo $row2['password']; ?></td>
+          <td><?php {echo preg_replace("/(.)/","*",$row2['password']);} ?></td>
         </tr>
 		</table>
       <span>

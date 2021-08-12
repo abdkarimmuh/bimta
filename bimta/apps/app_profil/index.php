@@ -38,9 +38,19 @@
           <td><?php if ($_SESSION['user_level']=='dosen') {echo $row['username'];} elseif ($_SESSION['user_level']=='mahasiswa') {echo $row2['id_bimbingan'];} elseif ($_SESSION['user_level']=='admin') {echo $row3['username'];} elseif ($_SESSION['user_level']=='kaprodi') {echo $row4['username'];}?></td>
         </tr>
         <tr>
-          <td><?php if ($_SESSION['user_level']=='dosen') {echo "Password";} elseif ($_SESSION['user_level']=='mahasiswa') {echo "Thn Angkatan";} elseif ($_SESSION['user_level']=='admin') {echo "Password";} elseif ($_SESSION['user_level']=='kaprodi') {echo "Password";}?> </td>
+          <td>
+            <?php
+              if ($_SESSION['user_level']=='dosen') {echo "Password";}
+              elseif ($_SESSION['user_level']=='mahasiswa') {echo "Thn Angkatan";} 
+              elseif ($_SESSION['user_level']=='admin') {echo "Password";} 
+              elseif ($_SESSION['user_level']=='kaprodi') {echo "Password";}?> </td>
           <td>:</td>
-          <td><?php if ($_SESSION['user_level']=='dosen') {echo $row['password'];} elseif ($_SESSION['user_level']=='mahasiswa') {echo $row2['th_angkatan'];} elseif ($_SESSION['user_level']=='admin') {echo $row3['password'];} elseif ($_SESSION['user_level']=='kaprodi') {echo $row4['password'];}?></td>
+          <td>
+            <?php 
+              if ($_SESSION['user_level']=='dosen') {echo preg_replace("/(.)/","*",$row['password']);} 
+              elseif ($_SESSION['user_level']=='mahasiswa') {echo preg_replace("/(.)/","*",$row2['th_angkatan']);} 
+              elseif ($_SESSION['user_level']=='admin') {echo preg_replace("/(.)/","*",$row3['password']);} 
+              elseif ($_SESSION['user_level']=='kaprodi') {echo preg_replace("/(.)/","*",$row4['password']);}?></td>
         </tr>
 		</table>
       <span>
