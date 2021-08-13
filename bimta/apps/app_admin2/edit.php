@@ -26,7 +26,7 @@
 					<label for="input" class="col-sm-4 control-label">No Telp/HP :</label>
 					<div class="col-sm-6">
 						<input type="hidden" name="id_admin" value="<?php echo $id; ?>">
-						<input type="text" name="no_telp" id="input" class="form-control" value="<?php echo $row['no_telp']; ?>" required="required">
+						<input type="text" onkeypress="return event.charCode >= 48 && event.charCode <=57" name="no_telp" id="input" class="form-control" value="<?php echo $row['no_telp']; ?>" required="required">
 					</div>
 				</div>
 

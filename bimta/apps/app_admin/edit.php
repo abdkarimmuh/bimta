@@ -27,9 +27,8 @@
         <label for="input" class="col-sm-4 control-label">No Telp/HP :</label>
         <div class="col-sm-6">
           <input type="hidden" name="id_admin" value="<?php echo $id; ?>">
-          <input type="number" maxlength="13" name="no_telp" id="input" class="form-control"
-            value="<?php echo $row['no_telp']; ?>" required="required"
-            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+          <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <=57" maxlength="12" name="no_telp" id="input" class="form-control"
+            value="<?php echo $row['no_telp']; ?>" required="required">
         </div>
       </div>
 
