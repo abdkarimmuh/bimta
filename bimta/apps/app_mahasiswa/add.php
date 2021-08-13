@@ -11,7 +11,7 @@
       <div class="form-group">
         <label for="input" class="col-sm-4 control-label">NIM Mahasiswa :</label>
         <div class="col-sm-6">
-          <input type="number" maxlength="10" name="nim" id="input" class="form-control"
+          <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <=57" maxlength="10" name="nim" id="input" class="form-control"
             placeholder="NIM berupa 10 angka" value="" required="required"
             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
         </div>

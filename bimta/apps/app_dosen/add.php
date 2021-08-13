@@ -12,14 +12,15 @@
         <label for="input" class="col-sm-4 control-label">Nama Dosen :</label>
         <div class="col-sm-6">
           <input type="text" name="nm_dosen" id="input" class="form-control" placeholder="Disertai dengan gelar lengkap"
-            value="" required="required">
+            value="" required="required"
+            >
         </div>
       </div>
 
       <div class="form-group">
         <label for="input" class="col-sm-4 control-label">NIP Dosen :</label>
         <div class="col-sm-6">
-          <input type="number" maxlength="18" name="nip_dosen" id="input" class="form-control"
+          <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <=57" maxlength="18" name="nip_dosen" id="input" class="form-control"
             placeholder="Diketik tanpa spasi" value="" required="required"
             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
         </div>
@@ -28,8 +29,8 @@
       <div class="form-group">
         <label for="input" class="col-sm-4 control-label">No Telp/HP :</label>
         <div class="col-sm-6">
-          <input type="number" maxlength="13" name="no_telp" id="input" class="form-control"
-            placeholder="Maximum 13 angka" value="" required="required"
+          <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <=57" maxlength="12" name="no_telp" id="input" class="form-control"
+            placeholder="Maximum 12 angka" value="" required="required"
             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
         </div>
       </div>
