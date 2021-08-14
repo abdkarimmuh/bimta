@@ -11,7 +11,7 @@
       <div class="form-group">
         <label for="input" class="col-sm-4 control-label">Nama Kaprodi :</label>
         <div class="col-sm-6">
-          <input type="text" name="nm_kaprodi" id="input" class="form-control"
+          <input type="text" pattern="^[a-zA-Z .,]{2,30}$" name="nm_kaprodi" id="input" class="form-control"
             placeholder="Disertai dengan gelar lengkap" value="" required="required">
         </div>
       </div>

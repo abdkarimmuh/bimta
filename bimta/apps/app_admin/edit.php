@@ -18,7 +18,7 @@
         <label for="input" class="col-sm-4 control-label">Nama Admin :</label>
         <div class="col-sm-6">
           <input type="hidden" name="id_admin" value="<?php echo $id; ?>">
-          <input type="text" name="nm_admin" id="input" class="form-control" value="<?php echo $row['nm_admin']; ?>"
+          <input type="text" pattern="^[a-zA-Z .,]{2,30}$" name="nm_admin" id="input" class="form-control" value="<?php echo $row['nm_admin']; ?>"
             required="required">
         </div>
       </div>

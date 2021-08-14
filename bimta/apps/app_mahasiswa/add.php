@@ -20,7 +20,7 @@
       <div class="form-group">
         <label for="input" class="col-sm-4 control-label">Nama Mahasiswa :</label>
         <div class="col-sm-6">
-          <input type="text" name="nm_mhs" id="input" class="form-control" placeholder="Nama lengkap mahasiswa" value=""
+          <input type="text" pattern="^[a-zA-Z ]{2,30}$" name="nm_mhs" id="input" class="form-control" placeholder="Nama lengkap mahasiswa" value=""
             required="required">
         </div>
       </div>
