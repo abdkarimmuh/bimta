@@ -1,10 +1,16 @@
 <?php 
 $id_kaprodi   	 = @$_POST['id_kaprodi'];
-$username           = @$_POST['username'];
+$username        = @$_POST['username'];
 $password      	 = @$_POST['password'];
-$nm_kaprodi           = @$_POST['nm_kaprodi'];
+$password2		 = @$_POST['password2'];
+$nm_kaprodi      = @$_POST['nm_kaprodi'];
 $no_telp      	 = @$_POST['no_telp'];
-$nip_kaprodi      	 = @$_POST['nip_kaprodi'];
+$nip_kaprodi     = @$_POST['nip_kaprodi'];
+
+if ($password !== $password2) {
+	echo "Oops, pastikan password yang anda masukan sama!";
+	return false;
+  }
 
 if (isset($_POST['edit_kaprodi'])) {
 	try{

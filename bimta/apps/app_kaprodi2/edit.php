@@ -59,6 +59,14 @@
 				</div>
 
 				<div class="form-group">
+					<label for="input" class="col-sm-4 control-label">Konfirmasi Password :</label>
+					<div class="col-sm-6">
+						<input type="hidden" name="id_kaprodi" value="<?php echo $id; ?>">
+						<input type="password" name="password2" id="input" class="form-control" placeholder="Konfirmasi Password" value="" required="required">
+					</div>
+				</div>
+
+				<div class="form-group">
 					<div class="col-sm-6 col-sm-offset-4">
 						<button name="edit_kaprodi" type="submit" class="btn btn-primary">Update</button>
 						<a href="?apps=kaprodi2" class="btn btn-warning">Batal</a>

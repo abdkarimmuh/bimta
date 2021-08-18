@@ -1,7 +1,13 @@
 <?php 
 $nim   	 = @$_POST['nim'];
 $password      	 = @$_POST['password'];
+$password2		 = @$_POST['password2'];
 $username      	 = @$_POST['username'];
+
+if ($password !== $password2) {
+	echo "Oops, pastikan password yang anda masukan sama!";
+	return false;
+  }
 
 if (isset($_POST['edit_password'])) {
 	try{

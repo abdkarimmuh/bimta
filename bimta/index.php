@@ -20,7 +20,7 @@
 <body class="special-page">
   <div class="signin-form">
     <div class="container">
-      <form class="" method="post" id="login-form" autocomplete="off">
+      <form action="?" class="" method="post" id="login-form" autocomplete="off">
         <div class="form-signin panel panel-default">
           <div class="panel-body body2">
 
@@ -39,10 +39,12 @@
               <input type="password" class="form-control" placeholder="Password" name="password" id="password" />
             </div>
           </div>
+          <div class="g-recaptcha" data-sitekey="6LeypwocAAAAAPhaOKqHF98qGt-ZLbUfRXsXZmgF">
+          </div>
           <div class="panel-footer">
             <div class="row">
               <div class="col-sm-2">
-                <button type="submit" class="btn btn-default btndefault2" name="btn-login" id="btn-login">
+                <button type="submit" value="submit" class="btn btn-default btndefault2" name="btn-login" id="btn-login">
                   <span class="glyphicon glyphicon-log-in"></span> &nbsp; Login
                 </button>
               </div>
@@ -63,10 +65,12 @@
     </div>
   </div>
 
+
   <script src="assets/js/jquery-1.11.3-jquery.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
   <script src="assets/js/validation.min.js"></script>
   <script src="assets/js/script.js"></script>
 </body>
 
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </html>

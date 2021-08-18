@@ -1,14 +1,17 @@
 <?php
+
 	session_start();
-	//require_one dan include hampir sama
-	//kalau require jika error dia akan di tampilkan pesan errornya
+
 	require_once 'dbconfig.php';
 
-	if(isset($_POST['btn-login']))
+	if(isset($_POST['btn-login']) && ($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response']))
 	{
 		$username = trim($_POST['username']); //fungsi pada trim menghilangkan spasi
 		$user_password = trim($_POST['password']); // menghilangkan spasi yg di maksud,jika di user dan password qta ketik kan spasi,maka spasi tidak dibaca
 		$password = $user_password;
+		$secret = '6LeypwocAAAAAMf3dQrz6EvFENbR6LIV1TRr0mZoY';
+		$verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$_POST['g-recaptcha-response']);
+		$responseData = json_decode($verifyResponse);
 
 		try {
 			$stmt = $db_con->prepare("SELECT * FROM dosen WHERE username=:username");
@@ -51,6 +54,12 @@
 				$_SESSION['user_session'] = $row4['id_kaprodi'];			
 				$_SESSION['user_level'] = $row4['status_user'];			
 			}
+			elseif($responseData->success == true){
+				$succMsg = "Your contact request have submitted successfully.";
+			}
+			elseif($responseData->success == false){
+				$errMsg = "Robot verification failed, please try again.";
+			}
 			else{
 				echo "Maaf,Harap Periksa Username & Password Anda";
 			}
@@ -58,6 +67,7 @@
 		catch (PDOException $e) {
 			echo $e->getMessage();
 		}
+		
 	}
-
+	
 ?>

@@ -2,9 +2,16 @@
 $id_dosen   	 = @$_POST['id_dosen'];
 $username           = @$_POST['username'];
 $password      	 = @$_POST['password'];
+$password2			=@$_POST['password2'];
 $nm_dosen           = @$_POST['nm_dosen'];
 $no_telp      	 = @$_POST['no_telp'];
 $nip_dosen           = @$_POST['nip_dosen'];
+
+if ($password !== $password2) {
+	echo "Oops, pastikan password yang anda masukan sama!";
+	return false;
+  }
+  
 
 if (isset($_POST['edit_dosen'])) {
 	try{
